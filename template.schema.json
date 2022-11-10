@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "author": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "wallpaper": {
+            "type": "string",
+            "format": "uri"
+        },
+        "gtkTheme": {
+            "type": "string"
+        },
+        "configFiles": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "fileName": {
+                        "type": "string"
+                    },
+                    "configPath": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                } 
+            }
+        }
+    }
+}

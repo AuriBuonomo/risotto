@@ -1,0 +1,11 @@
+version: "3"
+
+tasks:
+  build: go build
+  install:
+    deps:
+      - clean
+      - build
+    cmds:
+      - go install
+  clean: go clean -i && rm $HOME/.config/risotto/config.toml && rm -rf $HOME/.local/share/risotto
